@@ -11,7 +11,7 @@ step 1: run “npm install”</p>
 2©. Go to project settings in your firebase project and copy the JSON credentials</p>
 <p class="has-line-data" data-line-start="9" data-line-end="10">step 3:  now go to your angular project and paste the credentials in the .env files(both             production and non production files)</p>
 <p class="has-line-data" data-line-start="11" data-line-end="17">To Build and Deploy the website online.<br>
-step 1: run “npm build --configuration=production --aot”<br>
+step 1: run “ng build --configuration=production --aot”<br>
 step 2: run “firebase init” select hosting and hit enter.<br>
 === Hosting Setup<br>
 Detected an existing Angular codebase in the current directory, should we use this? No<br>
