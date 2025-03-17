@@ -3,12 +3,30 @@
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
 
 ## Development server
+<p class="has-line-data" data-line-start="1" data-line-end="3">To start a local development server, run:<br>
+step 1: run “npm install”</p>
+<p class="has-line-data" data-line-start="4" data-line-end="8">step 2:  go to <a href="http://console.firebase.google.com">console.firebase.google.com</a><br>
+2(a). Create a firebase project, enable authentication, hosting, and firestore.<br>
+2(b). Install “Firebase Email Trigger Extension”<br>
+2©. Go to project settings in your firebase project and copy the JSON credentials</p>
+<p class="has-line-data" data-line-start="9" data-line-end="10">step 3:  now go to your angular project and paste the credentials in the .env files(both             production and non production files)</p>
+<p class="has-line-data" data-line-start="11" data-line-end="17">To Build and Deploy the website online.<br>
+step 1: run “npm build --configuration=production --aot”<br>
+step 2: run “firebase init” select hosting and hit enter.<br>
+=== Hosting Setup<br>
+Detected an existing Angular codebase in the current directory, should we use this? No<br>
+Do you want to use a web framework? (experimental) No</p>
+<pre><code>&lt;!--Your public directory is the folder (relative to your project directory) that--&gt;
+&lt;!--will contain Hosting assets to be uploaded with firebase deploy. If you--&gt;
+&lt;!--have a build process for your assets, use your build's output directory.--&gt;
 
-To start a local development server, run:
-npm install
-npm install three@0.134.0 --save
-npm install vanta --save
-npm install -g firebase-tools
+ What do you want to use as your public directory? dist/portfolio/browser
+Configure as a single-page app (rewrite all urls to /index.html)? Yes
+Set up automatic builds and deploys with GitHub? No
+File dist/portfolio/browser/index.html already exists. Overwrite? No
+Skipping write of dist/portfolio/browser/index.html
+</code></pre>
+<p class="has-line-data" data-line-start="28" data-line-end="29">step 3: run “firebase deploy”</p>
 
 ```bash
 ng serve
