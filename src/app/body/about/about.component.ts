@@ -10,6 +10,7 @@ declare var VANTA: any;
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
+  currentUrl: string='';
   constructor(public router: Router, public routerService: RouterService){}
   ngOnInit(){
     this.routerService.currentUrl=this.router.url;

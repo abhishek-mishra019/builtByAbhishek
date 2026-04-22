@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "builtbyabhishek"
-  }
+    "default": "builtbyabhishek",
+    "staging": "builtbyabhishek"
+  },
+  "targets": {},
+  "etags": {}
 }
