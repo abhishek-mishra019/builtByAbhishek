@@ -15,10 +15,11 @@ step 1: run “ng build --configuration=production --aot”<br>
 step 2: run “firebase login”<br>
 step 3: run “firebase use --add” to link your firebase project<br>
 step 3: run “firebase init” select hosting and hit enter.<br>
-=== Hosting Setup<br>
+=== Hosting Setup<br></p>
+<pre><code>&lt;
 Detected an existing Angular codebase in the current directory, should we use this? No<br>
-Do you want to use a web framework? (experimental) No</p>
-<pre><code>&lt;!--Your public directory is the folder (relative to your project directory) that--&gt;
+Do you want to use a web framework? (experimental) No
+!--Your public directory is the folder (relative to your project directory) that--&gt;
 &lt;!--will contain Hosting assets to be uploaded with firebase deploy. If you--&gt;
 &lt;!--have a build process for your assets, use your build's output directory.--&gt;
 
