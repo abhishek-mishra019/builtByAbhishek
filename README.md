@@ -15,7 +15,7 @@ step 1: run “ng build --configuration=production --aot”<br>
 step 2: run “firebase login”<br>
 step 3: run “firebase use --add” to link your firebase project<br>
 step 3: run “firebase init” select hosting and hit enter.<br>
-=== Hosting Setup<br></p>
+=== Hosting Setup</p>
 <pre><code>&lt;
 Detected an existing Angular codebase in the current directory, should we use this? No<br>
 Do you want to use a web framework? (experimental) No
