@@ -1,0 +1,315 @@
+.home{
+    height: 100vh;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+.home-content{
+    max-width: 600px;
+    height: fit-content;
+    max-height: fit-content;
+    z-index: 99;
+    overflow-y: auto;
+}
+
+.home-content h1{
+    position: relative;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+
+
+.home-content h3{
+    position: relative;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--main-color);
+    animation: slideIn 0.9s ease-in-out forwards;
+}
+
+
+.home-content p{
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+    animation: slideIn 0.8s ease-in-out forwards;
+}
+
+
+.home-content .btn-box{
+    position: relative;
+    display: flex;
+    width: 350px;
+    height: 50px;
+    justify-content: space-between;
+    animation: slideIn 0.7s ease-in-out forwards;
+}
+
+.btn-box a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+    font-size: 19px;
+    color: var(--bg-color);
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.btn-box a:hover{
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.btn-box a:nth-child(2){
+    background-color: transparent;
+    color: var(--main-color);
+}
+.btn-box a:nth-child(2):hover{
+    color: var(--bg-color);
+}
+.btn-box a:nth-child(2)::before{
+    background: var(--main-color);
+}
+
+
+.btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.btn-box a:hover::before{
+    width: 100%;
+}
+
+.home-sci{
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    margin-bottom: 3%;
+    display: flex;
+    justify-content: space-between;
+    animation: slideIn 0.6s ease-in-out forwards;
+    margin-bottom: 5rem;
+}
+
+.home-sci a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    color: var(--main-color) ;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.home-sci a:hover{
+    color: var(--bg-color);
+}
+.home-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-color);
+    z-index: -1;
+    transition: 0.5s;
+}
+.home-sci a:hover::before{
+    width: 100%;
+}
+
+.home-imgHover{
+    position: absolute;
+    top: 23%;
+    right: 9.5%;
+    width: 400px;
+    /* width: 500px; */
+    /* height: 100%; */
+    /* background: blue; */
+    /* border: 2px solid red;  */
+    transition: 3s;
+    /* animation: manipActiveHover .1s forwards; */
+    animation-delay: 4s;
+    pointer-events: none;
+    animation: slideIn 1s ease-in-out forwards;
+}
+.home-imgHover:hover{
+    background: var(--bg-color);
+    opacity: 0.3;
+}
+/* .home-imgHover::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    
+    animation: showRight 1s ease forwards;
+    animation-delay: 3s;
+    z-index: 2;
+} */
+/* keyframes animation */
+
+@keyframes showRight {  
+    100% {
+        /* width: 0; */
+        visibility: visible;
+    }
+    
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes manipActiveHover {
+    100% {
+        pointer-events: auto;
+    }
+}
+
+
+/* breakpoints */
+/* bigger laptops */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 599px) {
+    .home{
+        padding: 0 5%;
+        margin-top: 0;
+        /* background-color: var(--bg-color); */
+    }
+    .home-content {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        /* overflow-y: hidden;
+        /* height: fit-content;
+        margin-top: 0;
+        margin-bottom: 0; */ 
+    }
+    .home-content h1{
+        display: flex;
+        flex-direction: column;
+        font-size: 3rem;
+    }
+    .home-content h3{
+        font-size: 2rem;
+    }
+    .home-content p{
+        font-size: 1.4rem;
+    }
+    .home-content .btn-box{
+        width: 90%;
+        display: flex;
+        gap: 1rem;
+        height: 50px;
+        justify-content: left;
+        padding: 5px;
+    }
+    .home-sci{
+        margin-top: 10rem;
+        margin-bottom: 5rem;
+    }
+    .home-imgHover{
+        display: none;
+    }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width:941px){
+    .home{
+        padding: 0 5%;
+        /* background-color: var(--bg-color); */
+    }
+
+    .home-content {
+        max-width: 60%;
+    }
+
+    .home-content h1{
+        display: flex;
+        flex-direction: column;
+        font-size: 38px;
+    }
+    .home-imgHover{
+        width: 240px;
+        height: 240px;
+        right: 5%;
+        pointer-events: none;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .home{
+        padding: 0 5%;
+        /* background: var(--bg-color); */
+    }
+
+    .home-content h1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-imgHover{
+        width: 300px;
+        height: 300px;
+        right: 5%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+
+
+    .home-imgHover{
+        width: 300px;
+        height: 300px;
+        right: 5%;
+    }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    html{
+        font-size: 55%;
+    }
+}

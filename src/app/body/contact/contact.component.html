@@ -1,0 +1,34 @@
+<section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me!</span></h2>
+    <div class="contact-container">
+        <form (ngSubmit)="onSubmit()">
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Full Name" name="Name" required [(ngModel)]="name">
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="email" placeholder="Email Address" name="email" required [(ngModel)]="email">
+                    <span class="focus"></span>
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" placeholder="Mobile Number" name="mobile" required [(ngModel)]="phone">
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Email Subject" name="subject" required [(ngModel)]="subject">
+                    <span class="focus"></span>
+                </div>
+            </div>
+            <div class="textarea-field">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message" name="message" required [(ngModel)]="message"></textarea>
+                <span class="focus"></span>
+            </div>
+            <div class="btn-box btns">
+                <button class="btn" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,14 @@
+<header class="header" [ngClass]="{sticky: this.scrolled}">
+    <a (click)="home()" class="logo">Abhishek.</a>
+    <div class="bx bx-menu" id="menu-icon" [ngClass]="{'bx-x': this.menuClicked==true}" (click)="onMenuClick()"></div>
+    <nav class="navbar" [ngClass]="{active: this.menuClicked==true}">
+        <a (click)="home()" [ngClass]="{active: this.routerService.currentUrl=='/'}">Home</a>
+        <a (click)="about()" [ngClass]="{active: this.routerService.currentUrl=='/about'}">About</a>
+        <a (click)="journey()" [ngClass]="{active: this.routerService.currentUrl=='/journey'}">My Journey</a>
+        <a (click)="skills()" [ngClass]="{active: this.routerService.currentUrl=='/skills'}">Skills</a>
+        <a (click)="portfolio()" [ngClass]="{active: this.routerService.currentUrl=='/portfolio'}">Portfolio</a>
+        <a (click)="contact()" [ngClass]="{active: this.routerService.currentUrl=='/contact'}">Contact</a>
+
+        <span class="active-nav"></span>
+    </nav>
+</header>

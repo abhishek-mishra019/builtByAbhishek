@@ -1,0 +1,175 @@
+.skills{
+    height: 100vh;
+    /* background-color: var(--bg-color); */
+    padding-bottom: 7rem;
+}
+.heading{
+    font-size: 5rem;
+    padding-bottom: 3rem;
+    text-align: center;
+    font-weight: 600;
+}
+.skills-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    padding: 0 10%;
+}
+span{
+    color: var(--main-color);
+}
+.skills .skills-row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.skills-row .skills-column{
+    flex: 1 1 40rem;
+}
+.skills-column .title{
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 0 0 2.5rem;
+}
+.skills-box .skills-content{
+    position: relative;
+    border: 0.2rem solid var(--main-color);
+    border-radius: 0.6rem;
+    padding: 0.5rem 1.5rem ;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.skills-box .skills-content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: 0.5s;
+}
+.skills-box .skills-content:hover::before{
+    width: 100%;
+}
+
+.skills-content .prog{
+    padding: 1rem 0;
+}
+.prog h3{
+    font-size: 1.7rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+}
+
+.prog h3 span{
+    color: var(--text-color);
+}
+
+.prog .bar{
+    height: 2.5rem;
+    border-radius: 0.6rem;
+    border: 0.2rem solid var(--main-color);
+    padding: 0.5rem;
+    margin: 1rem 0;
+}
+.bar span{
+    display: block;
+    height: 100%;
+    border-radius: 0.3rem;
+    background: var(--main-color);
+}
+/* for technical skills */
+.skills-column:nth-child(1) .skills-content .prog:nth-child(1) .bar span{
+    width: 90%;
+}
+.skills-column:nth-child(1) .skills-content .prog:nth-child(2) .bar span{
+    width: 85%;
+}
+.skills-column:nth-child(1) .skills-content .prog:nth-child(3) .bar span{
+    width: 80%;
+}
+.skills-column:nth-child(1) .skills-content .prog:nth-child(4) .bar span{
+    width: 85%;
+}
+.skills-column:nth-child(1) .skills-content .prog:nth-child(5) .bar span{
+    width: 88%;
+}
+/* for professional skills */
+.skills-column:nth-child(2) .skills-content .prog:nth-child(1) .bar span{
+    width: 85%;
+}
+.skills-column:nth-child(2) .skills-content .prog:nth-child(2) .bar span{
+    width: 85%;
+}
+.skills-column:nth-child(2) .skills-content .prog:nth-child(3) .bar span{
+    width: 75%;
+}
+.skills-column:nth-child(2) .skills-content .prog:nth-child(4) .bar span{
+    width: 90%;
+}
+.skills-column:nth-child(2) .skills-content .prog:nth-child(5) .bar span{
+    width: 88%;
+}
+
+
+/* breakpoints */
+/* bigger laptops */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .skills{
+        padding:10rem 4% 5rem 5%;
+        overflow-y: auto;
+        /* background-color: var(--bg-color); */
+    }
+    .prog h3{
+        font-size: 1.2rem;
+    }
+    .skills .skills-container .skills-row{
+        margin-bottom: 5rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 767px){
+    .skills{
+        padding: 10rem 4% 6rem;
+        overflow-y: auto;
+        /* background-color: var(--bg-color); */
+        
+    }
+    .skills .skills-container .skills-row{
+        margin-bottom: 5rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width:991px){
+    .skills{
+        padding: 10rem 0  0 6rem;
+        overflow-y: auto;
+        /* background-color: var(--bg-color); */
+    }
+    .skills .skills-container .skills-row{
+        margin-bottom: 15rem;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .skills{
+        padding: 10rem 0  0 6rem;
+        overflow-y: auto;
+    }
+    .skills .skills-container .skills-row{
+        margin-bottom: 15rem;
+    }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
