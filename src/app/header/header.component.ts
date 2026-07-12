@@ -1,7 +1,8 @@
 import { Component, Input, SimpleChanges } from '@angular/core';
 import { AppRoutingModule } from '../app-routing.module';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { RouterService } from '../router.service';
+import { filter } from 'rxjs/operators';
 import { HostListener, Inject } from "@angular/core";
 // import { DOCUMENT } from '@angular/platform-browser';
 
@@ -25,6 +26,11 @@ export class HeaderComponent {
     ngOnInit(){
       this.currentUrl=this.router.url;
       this.routerService.currentUrl=this.currentUrl;
+      this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
+        this.routerService.currentUrl = event.urlAfterRedirects;
+      });
     }
 
     onMenuClick(){
